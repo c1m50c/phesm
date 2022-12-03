@@ -1,9 +1,17 @@
 [package]
 name = "phesm"
 description = "Productive, Helpful, Efficent String Methods."
+readme = "README.md"
 version = "0.1.0"
 edition = "2021"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
+serde = { version = "1.0.148", features = [ "derive" ], optional = true }
+
+[dev-dependencies]
+serde_json = "1.0.89"
+
+[features]
+serde = [ "dep:serde" ]
